@@ -1,4 +1,4 @@
-import { consistentEnumValues } from "../../src/rules/consistent-enum-values";
+import { consistentEnumValues } from "../../src/rules/consistent-enum-values.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("consistent-enum-values", consistentEnumValues, {

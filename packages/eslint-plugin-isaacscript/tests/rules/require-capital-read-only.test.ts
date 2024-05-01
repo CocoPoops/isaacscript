@@ -2,8 +2,8 @@ import type { TSESLint } from "@typescript-eslint/utils";
 import type {
   MessageIds,
   Options,
-} from "../../src/rules/require-capital-read-only";
-import { requireCapitalReadOnly } from "../../src/rules/require-capital-read-only";
+} from "../../src/rules/require-capital-read-only.js";
+import { requireCapitalReadOnly } from "../../src/rules/require-capital-read-only.js";
 import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];

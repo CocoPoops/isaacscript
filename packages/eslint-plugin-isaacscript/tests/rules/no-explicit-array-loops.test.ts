@@ -2,8 +2,8 @@ import type { TSESLint } from "@typescript-eslint/utils";
 import type {
   MessageIds,
   Options,
-} from "../../src/rules/no-explicit-array-loops";
-import { noExplicitArrayLoops } from "../../src/rules/no-explicit-array-loops";
+} from "../../src/rules/no-explicit-array-loops.js";
+import { noExplicitArrayLoops } from "../../src/rules/no-explicit-array-loops.js";
 import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];

@@ -2,8 +2,8 @@ import type { TSESLint } from "@typescript-eslint/utils";
 import type {
   MessageIds,
   Options,
-} from "../../src/rules/no-unnecessary-assignment";
-import { noUnnecessaryAssignment } from "../../src/rules/no-unnecessary-assignment";
+} from "../../src/rules/no-unnecessary-assignment.js";
+import { noUnnecessaryAssignment } from "../../src/rules/no-unnecessary-assignment.js";
 import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];

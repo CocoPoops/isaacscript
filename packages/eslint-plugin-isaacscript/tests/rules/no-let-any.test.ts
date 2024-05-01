@@ -1,4 +1,4 @@
-import { noLetAny } from "../../src/rules/no-let-any";
+import { noLetAny } from "../../src/rules/no-let-any.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-let-any", noLetAny, {

@@ -1,4 +1,4 @@
-import { noUnsafePlusplus } from "../../src/rules/no-unsafe-plusplus";
+import { noUnsafePlusplus } from "../../src/rules/no-unsafe-plusplus.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-unsafe-plusplus", noUnsafePlusplus, {

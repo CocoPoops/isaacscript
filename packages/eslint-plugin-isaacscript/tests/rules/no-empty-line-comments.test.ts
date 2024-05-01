@@ -1,4 +1,4 @@
-import { noEmptyLineComments } from "../../src/rules/no-empty-line-comments";
+import { noEmptyLineComments } from "../../src/rules/no-empty-line-comments.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-empty-line-comments", noEmptyLineComments, {

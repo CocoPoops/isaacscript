@@ -1,3 +1,4 @@
+import eslintPluginIsaacScript from "eslint-plugin-isaacscript";
 import tseslint from "typescript-eslint";
 import { baseDeprecation } from "./configs/base-deprecation.js";
 
@@ -7,7 +8,11 @@ import { baseDeprecation } from "./configs/base-deprecation.js";
 // (which show up in red) and ESLint rule violations (which show up in yellow).
 import "eslint-plugin-only-warn"; // https://github.com/bfanger/eslint-plugin-only-warn/issues/13#issuecomment-2041657774
 
-export const base = tseslint.config(...baseDeprecation);
+/** @type {import("@typescript-eslint/utils").TSESLint.FlatConfig.ConfigArray} */
+export const base = tseslint.config(
+  ...baseDeprecation,
+  ...eslintPluginIsaacScript.configs.recommended,
+);
 
 /** This ESLint config is meant to be used as a base for all TypeScript projects. */
 export const baseConfigOld = {

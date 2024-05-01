@@ -1,4 +1,4 @@
-import { requireVRegistration } from "../../src/rules/require-v-registration";
+import { requireVRegistration } from "../../src/rules/require-v-registration.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("require-v-registration", requireVRegistration, {

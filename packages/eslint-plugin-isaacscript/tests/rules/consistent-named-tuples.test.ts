@@ -1,4 +1,4 @@
-import { consistentNamedTuples } from "../../src/rules/consistent-named-tuples";
+import { consistentNamedTuples } from "../../src/rules/consistent-named-tuples.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("consistent-named-tuples", consistentNamedTuples, {

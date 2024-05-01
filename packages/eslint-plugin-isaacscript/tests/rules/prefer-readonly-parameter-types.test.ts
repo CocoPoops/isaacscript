@@ -1,4 +1,4 @@
-import { preferReadonlyParameterTypes } from "../../src/rules/prefer-readonly-parameter-types";
+import { preferReadonlyParameterTypes } from "../../src/rules/prefer-readonly-parameter-types.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run(

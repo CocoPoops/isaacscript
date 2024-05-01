@@ -1,4 +1,4 @@
-import { requireUnannotatedConstAssertions } from "../../src/rules/require-unannotated-const-assertions";
+import { requireUnannotatedConstAssertions } from "../../src/rules/require-unannotated-const-assertions.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run(

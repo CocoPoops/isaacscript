@@ -1,4 +1,4 @@
-import { noEmptyJSDoc } from "../../src/rules/no-empty-jsdoc";
+import { noEmptyJSDoc } from "../../src/rules/no-empty-jsdoc.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-empty-jsdoc", noEmptyJSDoc, {

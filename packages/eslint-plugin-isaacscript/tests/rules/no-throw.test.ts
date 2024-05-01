@@ -1,4 +1,4 @@
-import { noThrow } from "../../src/rules/no-throw";
+import { noThrow } from "../../src/rules/no-throw.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-throw", noThrow, {

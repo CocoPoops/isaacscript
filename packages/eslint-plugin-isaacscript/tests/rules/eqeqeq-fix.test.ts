@@ -1,4 +1,4 @@
-import { eqeqeqFix } from "../../src/rules/eqeqeq-fix";
+import { eqeqeqFix } from "../../src/rules/eqeqeq-fix.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("eqeqeq-fix", eqeqeqFix, {

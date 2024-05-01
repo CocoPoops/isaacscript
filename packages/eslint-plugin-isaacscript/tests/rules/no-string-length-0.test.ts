@@ -1,4 +1,4 @@
-import { noStringLength0 } from "../../src/rules/no-string-length-0";
+import { noStringLength0 } from "../../src/rules/no-string-length-0.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-string-length-0", noStringLength0, {

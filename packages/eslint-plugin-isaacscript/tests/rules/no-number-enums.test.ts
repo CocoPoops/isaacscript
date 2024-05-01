@@ -1,4 +1,4 @@
-import { noNumberEnums } from "../../src/rules/no-number-enums";
+import { noNumberEnums } from "../../src/rules/no-number-enums.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-number-enums", noNumberEnums, {

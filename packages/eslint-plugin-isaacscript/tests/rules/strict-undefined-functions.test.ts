@@ -2,8 +2,8 @@ import type { TSESLint } from "@typescript-eslint/utils";
 import type {
   MessageIds,
   Options,
-} from "../../src/rules/strict-undefined-functions";
-import { strictUndefinedFunctions } from "../../src/rules/strict-undefined-functions";
+} from "../../src/rules/strict-undefined-functions.js";
+import { strictUndefinedFunctions } from "../../src/rules/strict-undefined-functions.js";
 import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];

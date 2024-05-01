@@ -7,6 +7,7 @@ import tseslint from "typescript-eslint";
  * TODO: This plugin does not yet support flat config.
  *
  * @see https://github.com/gund/eslint-plugin-deprecation/pulls
+ * @type {import("@typescript-eslint/utils").TSESLint.FlatConfig.ConfigArray}
  */
 export const baseDeprecation = tseslint.config({
   /*

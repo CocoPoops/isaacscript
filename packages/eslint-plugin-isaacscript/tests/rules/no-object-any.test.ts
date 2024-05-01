@@ -1,4 +1,4 @@
-import { noObjectAny } from "../../src/rules/no-object-any";
+import { noObjectAny } from "../../src/rules/no-object-any.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-object-any", noObjectAny, {

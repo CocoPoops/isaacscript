@@ -1,4 +1,4 @@
-import { noObjectMethodsWithMapSet } from "../../src/rules/no-object-methods-with-map-set";
+import { noObjectMethodsWithMapSet } from "../../src/rules/no-object-methods-with-map-set.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-object-methods-with-map-set", noObjectMethodsWithMapSet, {

@@ -1,4 +1,4 @@
-import { preferPostfixPlusplus } from "../../src/rules/prefer-postfix-plusplus";
+import { preferPostfixPlusplus } from "../../src/rules/prefer-postfix-plusplus.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("prefer-postfix-plusplus", preferPostfixPlusplus, {

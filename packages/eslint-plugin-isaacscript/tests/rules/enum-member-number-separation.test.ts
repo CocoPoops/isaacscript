@@ -1,4 +1,4 @@
-import { enumMemberNumberSeparation } from "../../src/rules/enum-member-number-separation";
+import { enumMemberNumberSeparation } from "../../src/rules/enum-member-number-separation.js";
 import { ruleTester } from "../utils.js";
 
 ruleTester.run("enum-member-number-separation", enumMemberNumberSeparation, {
