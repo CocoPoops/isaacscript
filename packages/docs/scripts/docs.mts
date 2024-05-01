@@ -271,7 +271,7 @@ const PARENT_CONFIG_LINKS = {
   "@typescript-eslint/stylistic":
     "https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic.ts",
   "eslint-comments/recommended":
-    "https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/lib/configs/recommended.js",
+    "https://github.com/eslint-community/eslint-plugin-eslint-comments/blob/master/lib/configs/recommended.js",
   "import/recommended":
     "https://github.com/import-js/eslint-plugin-import/blob/main/config/recommended.js",
   "jsdoc/recommended":
@@ -319,8 +319,8 @@ export async function makeECIDocs(quiet: boolean): Promise<void> {
   markdownOutput += await getMarkdownRuleSection(
     "eslint-comments",
     getPluginHeaderTitle("eslint-comments"),
-    "https://github.com/mysticatea/eslint-plugin-eslint-comments",
-    "https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/docs/rules/__RULE_NAME__.md",
+    "https://github.com/eslint-community/eslint-plugin-eslint-comments",
+    "https://github.com/eslint-community/eslint-plugin-eslint-comments/blob/master/docs/rules/__RULE_NAME__.md",
     ESLintPluginESLintComments,
   );
 

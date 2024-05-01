@@ -41,7 +41,8 @@
     "build": "tsx ./scripts/build.ts",
     "create-rule": "tsx ./scripts/createRule.ts",
     "generate": "tsx ./scripts/generate.ts",
-    "lint": "tsx ./scripts/lint.ts"
+    "lint": "tsx ./scripts/lint.ts",
+    "test": "jest"
   },
   "dependencies": {
     "@typescript-eslint/utils": "^7.8.0",

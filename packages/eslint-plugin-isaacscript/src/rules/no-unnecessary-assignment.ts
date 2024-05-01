@@ -1,6 +1,6 @@
 import type { TSESTree } from "@typescript-eslint/utils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
-import * as ts from "typescript";
+import ts from "typescript";
 import { isFlagSet, unionTypeParts } from "../typeUtils.js";
 import { createRule } from "../utils.js";
 

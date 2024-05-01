@@ -1,3 +1,6 @@
+// `eslint` is stuck on version 8 until `typescript-eslint` and `eslint-plugin-import` are
+// compatible.
+
 import {
   $s,
   PACKAGE_JSON,

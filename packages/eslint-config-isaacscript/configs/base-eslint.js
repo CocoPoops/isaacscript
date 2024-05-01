@@ -498,7 +498,7 @@ const SUGGESTIONS = {
   "no-unused-expressions": "off",
 
   "no-unused-labels": "error",
-  "no-useless-assignment": "error",
+  /// "no-useless-assignment": "error", // TODO: Uncomment when ESLint 9 is usable.
   "no-useless-call": "error",
   "no-useless-catch": "error",
 

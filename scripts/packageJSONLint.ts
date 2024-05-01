@@ -5,6 +5,7 @@ import {
   PACKAGE_JSON,
   echo,
   exit,
+  getArgs,
   getPackageJSON,
   getPackageJSONDependencies,
   isFile,
@@ -23,18 +24,25 @@ if (isMain()) {
 }
 
 function main() {
-  echo('Checking "package.json" files...');
+  const args = getArgs();
+  const verbose = args.includes("--verbose");
 
-  if (!packageJSONLint()) {
+  if (verbose) {
+    echo('Checking "package.json" files...');
+  }
+
+  if (!packageJSONLint(verbose)) {
     exit(1);
   }
 
-  echo('All "package.json" files are valid.');
+  if (verbose) {
+    echo('All "package.json" files are valid.');
+  }
 }
 
 /** @returns Whether or not all "package.json" files are valid. */
-export function packageJSONLint(): boolean {
-  if (!isPackageJSONValid(REPO_ROOT_PACKAGE_JSON_PATH, undefined)) {
+export function packageJSONLint(verbose: boolean): boolean {
+  if (!isPackageJSONValid(REPO_ROOT_PACKAGE_JSON_PATH, undefined, verbose)) {
     return false;
   }
   const rootDeps = getDeps(REPO_ROOT_PACKAGE_JSON_PATH);
@@ -48,7 +56,7 @@ export function packageJSONLint(): boolean {
 
   let allValid = true;
   for (const packageJSONPath of packageJSONPaths) {
-    if (!isPackageJSONValid(packageJSONPath, rootDeps)) {
+    if (!isPackageJSONValid(packageJSONPath, rootDeps, verbose)) {
       allValid = false;
     }
   }
@@ -59,7 +67,12 @@ export function packageJSONLint(): boolean {
 function isPackageJSONValid(
   packageJSONPath: string,
   rootDeps: ReadonlyRecord<string, string> | undefined,
+  verbose: boolean,
 ): boolean {
+  if (verbose) {
+    console.log(`Checking: ${packageJSONPath}`);
+  }
+
   const isRoot = rootDeps === undefined;
   const isTemplateFile = packageJSONPath.includes("dynamic");
   const isDocs = packageJSONPath.includes("docs");

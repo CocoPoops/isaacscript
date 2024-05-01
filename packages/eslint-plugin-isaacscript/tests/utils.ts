@@ -5,7 +5,15 @@ import path from "node:path";
 export const ruleTester = new RuleTester({
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    tsconfigRootDir: path.join(import.meta.dirname, "fixtures"),
+    /**
+     * Switching `__dirname` to `import.meta.dirname` causes test errors:
+     *
+     * ```
+     * The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020',
+     * 'es2022', 'esnext', 'system', 'node16', or 'NodeNext'.
+     * ```
+     */
+    tsconfigRootDir: path.join(__dirname, "fixtures"),
     project: true,
   },
 });
