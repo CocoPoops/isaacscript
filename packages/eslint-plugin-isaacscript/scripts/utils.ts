@@ -1,7 +1,7 @@
 import type { TSESLint } from "@typescript-eslint/utils";
 import { kebabCaseToCamelCase } from "isaacscript-common-ts";
 import * as prettier from "prettier";
-import { PLUGIN_NAME, REPO_ROOT } from "./constants.mjs";
+import { PLUGIN_NAME, REPO_ROOT } from "./constants.js";
 
 export type RuleDefinition = TSESLint.RuleModule<string, unknown[]>;
 
