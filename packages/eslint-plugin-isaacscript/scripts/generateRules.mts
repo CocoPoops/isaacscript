@@ -36,7 +36,7 @@ function getRulesCode(ruleNames: readonly string[]) {
 
   for (const ruleName of ruleNames) {
     const camelCaseRuleName = getCamelCaseRuleName(ruleName);
-    text += `import { ${camelCaseRuleName} } from "./rules/${ruleName}";\n`;
+    text += `import { ${camelCaseRuleName} } from "./rules/${ruleName}.js";\n`;
   }
 
   text += "\n";

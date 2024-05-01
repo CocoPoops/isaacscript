@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/newline-between-switch-case";
 import { newlineBetweenSwitchCase } from "../../src/rules/newline-between-switch-case";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];

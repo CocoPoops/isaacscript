@@ -1,5 +1,5 @@
 import { consistentEnumValues } from "../../src/rules/consistent-enum-values";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run("consistent-enum-values", consistentEnumValues, {
   valid: [

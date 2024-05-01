@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/require-variadic-function-argument";
 import { requireVariadicFunctionArgument } from "../../src/rules/require-variadic-function-argument";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];

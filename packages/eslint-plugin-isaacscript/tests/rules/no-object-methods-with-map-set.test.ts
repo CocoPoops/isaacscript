@@ -1,5 +1,5 @@
 import { noObjectMethodsWithMapSet } from "../../src/rules/no-object-methods-with-map-set";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-object-methods-with-map-set", noObjectMethodsWithMapSet, {
   valid: [

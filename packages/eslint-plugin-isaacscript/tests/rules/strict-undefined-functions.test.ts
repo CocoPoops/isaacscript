@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/strict-undefined-functions";
 import { strictUndefinedFunctions } from "../../src/rules/strict-undefined-functions";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];

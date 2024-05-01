@@ -1,2 +1,9 @@
-export { configs } from "./configs";
-export { rules } from "./rules";
+import { configs } from "./configs.js";
+import { rules } from "./rules.js";
+
+const plugin = {
+  configs,
+  rules,
+};
+
+export default plugin;

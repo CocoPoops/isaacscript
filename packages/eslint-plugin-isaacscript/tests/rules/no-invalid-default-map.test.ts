@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/no-invalid-default-map";
 import { noInvalidDefaultMap } from "../../src/rules/no-invalid-default-map";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<

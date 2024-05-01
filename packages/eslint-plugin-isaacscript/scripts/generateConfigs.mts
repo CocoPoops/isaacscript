@@ -36,6 +36,19 @@ const BASE_CONFIG: LinterConfig = {
     // "isaacscript/no-template-curly-in-string-fix" rule.
     "no-template-curly-in-string": "off",
   },
+
+  overrides: [
+    // Disable some TypeScript-specific rules in JavaScript files.
+    {
+      files: ["*.js", "*.cjs", "*.mjs", "*.jsx"],
+      rules: {
+        "isaacscript/no-let-any": "off",
+        "isaacscript/no-object-any": "off",
+        "isaacscript/require-capital-const-assertions": "off",
+        "isaacscript/require-capital-read-only": "off",
+      },
+    },
+  ],
 };
 
 export async function generateConfigs(): Promise<void> {

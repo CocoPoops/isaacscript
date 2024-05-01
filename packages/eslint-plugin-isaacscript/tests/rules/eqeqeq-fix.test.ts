@@ -1,5 +1,5 @@
 import { eqeqeqFix } from "../../src/rules/eqeqeq-fix";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run("eqeqeq-fix", eqeqeqFix, {
   valid: [

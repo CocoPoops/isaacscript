@@ -46,4 +46,15 @@ export const recommended = {
     "isaacscript/strict-undefined-functions": "error",
     "isaacscript/strict-void-functions": "error",
   },
+  overrides: [
+    {
+      files: ["*.js", "*.cjs", "*.mjs", "*.jsx"],
+      rules: {
+        "isaacscript/no-let-any": "off",
+        "isaacscript/no-object-any": "off",
+        "isaacscript/require-capital-const-assertions": "off",
+        "isaacscript/require-capital-read-only": "off",
+      },
+    },
+  ],
 };

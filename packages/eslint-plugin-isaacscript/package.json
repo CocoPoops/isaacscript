@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "author": "Zamiell",
-  "type": "commonjs",
+  "type": "module",
   "main": "./dist/index.js",
   "files": [
     "dist",
@@ -45,13 +45,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "@typescript-eslint/type-utils": "^7.8.0",
-    "@typescript-eslint/types": "^7.8.0",
-    "@typescript-eslint/utils": "^7.8.0"
+    "isaacscript-common-ts": "^16.1.0",
+    "typescript-eslint": "^7.8.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/parser": ">= 6.0.0",
-    "eslint": ">= 8.0.0",
+    "eslint": ">= 9.0.0",
     "typescript": ">= 5.0.0"
   }
 }

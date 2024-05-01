@@ -1,5 +1,5 @@
 import { noObjectAny } from "../../src/rules/no-object-any";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-object-any", noObjectAny, {
   valid: [

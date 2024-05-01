@@ -1,5 +1,5 @@
 import { noForIn } from "../../src/rules/no-for-in";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run("no-for-in", noForIn, {
   valid: [

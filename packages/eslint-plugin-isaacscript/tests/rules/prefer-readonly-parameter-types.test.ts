@@ -1,5 +1,5 @@
 import { preferReadonlyParameterTypes } from "../../src/rules/prefer-readonly-parameter-types";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 ruleTester.run(
   "prefer-readonly-parameter-types",

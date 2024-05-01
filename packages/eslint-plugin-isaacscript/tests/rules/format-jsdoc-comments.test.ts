@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/format-jsdoc-comments";
 import { formatJSDocComments } from "../../src/rules/format-jsdoc-comments";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];

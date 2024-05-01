@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/no-unnecessary-assignment";
 import { noUnnecessaryAssignment } from "../../src/rules/no-unnecessary-assignment";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];

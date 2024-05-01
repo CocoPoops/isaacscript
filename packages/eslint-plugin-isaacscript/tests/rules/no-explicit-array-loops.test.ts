@@ -4,7 +4,7 @@ import type {
   Options,
 } from "../../src/rules/no-explicit-array-loops";
 import { noExplicitArrayLoops } from "../../src/rules/no-explicit-array-loops";
-import { ruleTester } from "../utils";
+import { ruleTester } from "../utils.js";
 
 const valid: Array<TSESLint.ValidTestCase<Options>> = [];
 const invalid: Array<TSESLint.InvalidTestCase<MessageIds, Options>> = [];
