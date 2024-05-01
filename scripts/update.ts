@@ -1,9 +1,6 @@
-// `eslint` is stuck on version 8 until we can migrate to the flat config.
-
 import {
   $s,
   PACKAGE_JSON,
-  dirName,
   echo,
   getPackageJSONDependencies,
   getPackageJSONField,
@@ -16,8 +13,7 @@ import { trimPrefix } from "isaacscript-common-ts";
 import path from "node:path";
 import { getMonorepoPackageNames } from "./getMonorepoPackageNames.js";
 
-const __dirname = dirName();
-const REPO_ROOT = path.join(__dirname, "..");
+const REPO_ROOT = path.join(import.meta.dirname, "..");
 
 if (isMain()) {
   updateIsaacScriptMonorepo();

@@ -75,12 +75,6 @@ const SUPPORTED_RULES = {
       selector: "variable",
       format: ["camelCase", "PascalCase", "UPPER_CASE"],
       leadingUnderscore: "allow",
-
-      // Polyfilling "__dirname" in ESM files is a common pattern.
-      filter: {
-        regex: "^__dirname$",
-        match: false,
-      },
     },
     // Allow camelCase functions (23.2), and PascalCase functions (23.8).
     {
@@ -513,10 +507,14 @@ const EXTENSION_RULES = {
 const config = {
   // We need to provide some special configuration to ESLint in order for it to parse TypeScript
   // files. From:
-  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/base.ts
+  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/base.ts
   parser: "@typescript-eslint/parser",
   parserOptions: {
     sourceType: "module",
+
+    // Recommended as per the official documentation:
+    // https://typescript-eslint.io/getting-started/typed-linting
+    project: true,
 
     // Needed for `eslint-plugin-import` to work properly:
     // https://github.com/import-js/eslint-plugin-import/blob/main/config/recommended.js

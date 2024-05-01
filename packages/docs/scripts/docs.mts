@@ -11,7 +11,6 @@ import ESLintPluginN from "eslint-plugin-n";
 import ESLintPluginUnicorn from "eslint-plugin-unicorn";
 import extractComments from "extract-comments";
 import {
-  dirName,
   echo,
   fatalError,
   isDirectory,
@@ -40,8 +39,6 @@ type ParentConfig =
   | "n/recommended"
   | "unicorn/recommended"
   | "eslint-config-prettier";
-
-const __dirname = dirName();
 
 const MARKDOWN_HEADER = `# \`eslint-config-isaacscript\`
 
@@ -123,7 +120,7 @@ Below, we provide documentation for every rule that is disabled. (We take a blac
 
 // -------------------------------------------------------------------------------------------------
 
-const REPO_ROOT = path.join(__dirname, "..", "..", "..");
+const REPO_ROOT = path.join(import.meta.dirname, "..", "..", "..");
 
 const BASE_CONFIGS_PATH = path.join(
   REPO_ROOT,

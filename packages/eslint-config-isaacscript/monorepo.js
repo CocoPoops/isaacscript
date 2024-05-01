@@ -1,21 +1,21 @@
-const path = require("node:path");
+import path from "node:path";
 
-const REPO_ROOT = path.join(__dirname, "..", "..");
+const REPO_ROOT = path.join(import.meta.dirname, "..", "..");
 
 /**
  * This config is meant to be used in the IsaacScript monorepo.
  *
  * @type {import("eslint").Linter.Config}
  */
-const config = {
+export default {
   // We need to add the `tsconfigRootDir` property, but we must also repeat the options from
   // "base-typescript-eslint.js" or they will be deleted.
   parserOptions: {
     sourceType: "module",
+    project: true,
     ecmaVersion: "latest",
 
     tsconfigRootDir: REPO_ROOT,
-    project: true, // https://github.com/typescript-eslint/typescript-eslint/pull/6084
   },
 
   ignorePatterns: ["**/dist/**"],
@@ -33,5 +33,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

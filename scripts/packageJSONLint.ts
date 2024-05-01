@@ -3,7 +3,6 @@
 import { globSync } from "glob";
 import {
   PACKAGE_JSON,
-  dirName,
   echo,
   exit,
   getPackageJSON,
@@ -16,9 +15,7 @@ import type { ReadonlyRecord } from "isaacscript-common-ts";
 import { isKebabCase } from "isaacscript-common-ts";
 import path from "node:path";
 
-const __dirname = dirName();
-
-const REPO_ROOT = path.join(__dirname, "..");
+const REPO_ROOT = path.join(import.meta.dirname, "..");
 const REPO_ROOT_PACKAGE_JSON_PATH = path.join(REPO_ROOT, PACKAGE_JSON);
 
 if (isMain()) {

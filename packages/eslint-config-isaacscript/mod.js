@@ -36,12 +36,6 @@ const config = {
         selector: "variable",
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
-
-        // Polyfilling "__dirname" in ESM files is a common pattern.
-        filter: {
-          regex: "^__dirname$",
-          match: false,
-        },
       },
       // Allow camelCase functions (23.2), and PascalCase functions (23.8).
       {

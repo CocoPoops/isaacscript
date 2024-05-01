@@ -1,4 +1,4 @@
-- Upgrade ESLint infra when this PR passes: https://github.com/eslint/eslint/pull/18134
+- uncomment rule in eslint base config (search for "todo" in 2 places, also in docs.mts)
 
 - lint:
   - fix returning `Promise<string[]>`
