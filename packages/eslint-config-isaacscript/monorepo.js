@@ -2,12 +2,8 @@ import path from "node:path";
 
 const REPO_ROOT = path.join(import.meta.dirname, "..", "..");
 
-/**
- * This config is meant to be used in the IsaacScript monorepo.
- *
- * @type {import("eslint").Linter.Config}
- */
-export default {
+/** This config is meant to be used in the IsaacScript monorepo. */
+export const monorepoConfig = {
   // We need to add the `tsconfigRootDir` property, but we must also repeat the options from
   // "base-typescript-eslint.js" or they will be deleted.
   parserOptions: {

@@ -5,7 +5,6 @@
 // 1) Best Practices
 // 2) Stylistic Issues
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const BEST_PRACTICES = {
   /**
    * The `allowWholeFile` option is enabled because it is common practice to use "eslint-disable"
@@ -31,7 +30,6 @@ const BEST_PRACTICES = {
   "eslint-comments/no-unused-enable": "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const STYLISTIC_ISSUES = {
   /**
    * Disabled because it is only useful in projects that want to prevent disabling specific ESLint
@@ -46,8 +44,7 @@ const STYLISTIC_ISSUES = {
   "eslint-comments/require-description": "off",
 };
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   plugins: ["eslint-comments"],
 
   rules: {
@@ -55,5 +52,3 @@ const config = {
     ...STYLISTIC_ISSUES,
   },
 };
-
-module.exports = config;

@@ -1,9 +1,5 @@
-/**
- * This ESLint config is meant to be used as a base for all TypeScript projects.
- *
- *  @type {import("eslint").Linter.Config}
- */
-const config = {
+/** This ESLint config is meant to be used as a base for all TypeScript projects. */
+export const baseConfig = {
   extends: [
     /**
      * Find deprecated code:
@@ -64,5 +60,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

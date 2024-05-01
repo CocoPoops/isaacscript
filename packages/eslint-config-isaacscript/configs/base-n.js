@@ -2,13 +2,7 @@
 // https://github.com/eslint-community/eslint-plugin-n
 // (This is a forked version of `eslint-plugin-node`.)
 
-// Rules are separated into categories:
-// 1) Best Practices
-// 2) Possible Errors
-// 3) Stylistic Issues
-
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   extends: ["plugin:n/recommended"],
 
   rules: {
@@ -148,5 +142,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

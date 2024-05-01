@@ -8,7 +8,6 @@ const confusingBrowserGlobals = require("confusing-browser-globals");
 // 2) Suggestions
 // 3) Layout & Formatting
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const POSSIBLE_PROBLEMS = {
   /** The `checkForEach` option is enabled to make the rule stricter. */
   "array-callback-return": [
@@ -97,7 +96,6 @@ const POSSIBLE_PROBLEMS = {
   "valid-typeof": "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const SUGGESTIONS = {
   "accessor-pairs": "error",
   "arrow-body-style": "error",
@@ -637,7 +635,6 @@ const SUGGESTIONS = {
   yoda: "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const LAYOUT_AND_FORMATTING = {
   "array-bracket-newline": "off", // eslint-config-prettier
   "array-bracket-spacing": "off", // eslint-config-prettier
@@ -712,13 +709,10 @@ const LAYOUT_AND_FORMATTING = {
   "yield-star-spacing": "off", // eslint-config-prettier
 };
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   rules: {
     ...POSSIBLE_PROBLEMS,
     ...SUGGESTIONS,
     ...LAYOUT_AND_FORMATTING,
   },
 };
-
-module.exports = config;

@@ -33,6 +33,7 @@
     // setting can cause false positives. Specifically:
     // - Importing from the Node standard library causes type declarations errors in a browser
     //   projects (because Node type declarations are not supposed to exist).
+    // - Using `import.meta.dirname` causes errors in CommonJS projects.
     // - In places without an `outDir` specified (like at the root of a monorepo), it will result in
     //   the following error: "Cannot write file ... because it would overwrite input file." In
     //   order to get around this, you have to specify a spurious `outDir`.

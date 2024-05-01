@@ -7,12 +7,9 @@ const ESLINT_CONFIG_ISAACSCRIPT_PATH = path.join(
   "eslint-config-isaacscript",
 );
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   extends: [
     path.join(ESLINT_CONFIG_ISAACSCRIPT_PATH, "base.js"),
     path.join(ESLINT_CONFIG_ISAACSCRIPT_PATH, "monorepo.js"),
   ],
 };
-
-module.exports = config;

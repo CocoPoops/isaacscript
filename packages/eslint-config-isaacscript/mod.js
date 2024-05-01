@@ -1,9 +1,7 @@
 /**
  * This config is meant to be used as a base for IsaacScript mods (or TypeScriptToLua projects).
- *
- * @type {import("eslint").Linter.Config}
  */
-const config = {
+export default {
   extends: [
     /**
      * The IsaacScript mod config extends the base configuration:
@@ -219,5 +217,3 @@ const config = {
     "no-restricted-globals": "off",
   },
 };
-
-module.exports = config;

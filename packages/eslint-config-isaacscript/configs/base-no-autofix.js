@@ -3,10 +3,8 @@
  * https://github.com/aladdin-add/eslint-plugin/tree/master/packages/no-autofix
  *
  * This allows the fixer for specific core ESLint rules to be turned off.
- *
- * @type {import("eslint").Linter.Config}
  */
-const config = {
+export default {
   plugins: ["no-autofix"],
 
   rules: {
@@ -26,5 +24,3 @@ const config = {
     "no-autofix/prefer-const": "error",
   },
 };
-
-module.exports = config;

@@ -1,10 +1,8 @@
 /**
  * This ESLint config only contains rules from `eslint-plugin-jsdoc`:
  * https://github.com/gajus/eslint-plugin-jsdoc
- *
- * @type {import("eslint").Linter.Config}
  */
-const config = {
+export default {
   plugins: ["jsdoc"],
 
   rules: {
@@ -250,5 +248,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

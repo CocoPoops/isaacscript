@@ -7,7 +7,6 @@
 // 3) Static analysis
 // 4) Style guide
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const HELPFUL_WARNINGS = {
   "import/export": "error",
 
@@ -74,7 +73,6 @@ const HELPFUL_WARNINGS = {
   "import/no-unused-modules": "off",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const MODULE_SYSTEMS = {
   "import/no-amd": "error",
   "import/no-commonjs": "error",
@@ -87,7 +85,6 @@ const MODULE_SYSTEMS = {
   "import/unambiguous": "off",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const STATIC_ANALYSIS = {
   /**
    * Disabled because this is [already handled by the TypeScript
@@ -136,7 +133,6 @@ const STATIC_ANALYSIS = {
   "import/no-webpack-loader-syntax": "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const STYLE_GUIDE = {
   "import/consistent-type-specifier-style": "error",
 
@@ -200,10 +196,7 @@ const STYLE_GUIDE = {
   "import/prefer-default-export": "off",
 };
 
-/*
- * @type {import("eslint").Linter.Config}
- */
-const config = {
+export default {
   // Beyond just specifying the plugin, additional configuration is necessary to make the plugin
   // work properly with TypeScript. We extend the upstream TypeScript config to accomplish this:
   // https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
@@ -246,5 +239,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

@@ -5,7 +5,6 @@
 // 1) Supported Rules
 // 2) Extension Rules
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const SUPPORTED_RULES = {
   "@typescript-eslint/adjacent-overload-signatures": "error",
 
@@ -283,7 +282,6 @@ const SUPPORTED_RULES = {
   "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const EXTENSION_RULES = {
   "@typescript-eslint/block-spacing": "off", // eslint-config-prettier
   "@typescript-eslint/brace-style": "off", // eslint-config-prettier
@@ -503,8 +501,7 @@ const EXTENSION_RULES = {
   "@typescript-eslint/space-infix-ops": "off", // eslint-config-prettier
 };
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   // We need to provide some special configuration to ESLint in order for it to parse TypeScript
   // files. From:
   // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/base.ts
@@ -568,5 +565,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;

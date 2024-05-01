@@ -5,7 +5,6 @@
 // 1) Normal rules
 // 2) Deprecated rules
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const NORMAL_RULES = {
   "unicorn/better-regex": "error",
   "unicorn/catch-error-name": "error",
@@ -160,7 +159,6 @@ const NORMAL_RULES = {
   "unicorn/throw-new-error": "error",
 };
 
-/** @type {import("eslint").Linter.RulesRecord} */
 const DEPRECATED_RULES = {
   /** Disabled because this rule is deprecated. */
   "unicorn/import-index": "off",
@@ -214,8 +212,7 @@ const DEPRECATED_RULES = {
   "unicorn/regex-shorthand": "off",
 };
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
+export default {
   plugins: ["unicorn"],
 
   rules: {
@@ -233,5 +230,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;
