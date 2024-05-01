@@ -431,11 +431,6 @@ function auditBaseConfigRules(
   const allRuleNames = Object.keys(allRules);
 
   for (const ruleName of allRuleNames) {
-    // TODO: Remove when upgraded to ESLint 9.
-    if (ruleName === "no-useless-assignment") {
-      continue;
-    }
-
     let fullRuleName: string;
     if (configName === "eslint") {
       fullRuleName = ruleName;

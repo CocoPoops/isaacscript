@@ -1,3 +1,5 @@
+- readd test script to package.json for plugin
+
 - uncomment rule in eslint base config (search for "todo" in 2 places, also in docs.mts)
 
 - lint:
