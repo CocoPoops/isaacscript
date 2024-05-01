@@ -404,7 +404,6 @@ async function getMarkdownRuleSection(
 
   const { rules } = firstConfig;
   if (!isObject(rules)) {
-    console.log(firstConfig);
     fatalError(`Failed to parse the base rules in: ${baseConfigPath}`);
   }
 
