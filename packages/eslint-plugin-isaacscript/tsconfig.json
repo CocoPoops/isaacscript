@@ -13,9 +13,6 @@
     // Needed since this is a library.
     "declaration": true,
     "declarationMap": true,
-
-    // Needed to import from "package.json".
-    "resolveJsonModule": true,
   },
 
   "include": [

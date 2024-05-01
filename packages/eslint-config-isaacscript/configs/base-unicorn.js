@@ -1,10 +1,8 @@
-// This ESLint config only contains rules from `eslint-plugin-unicorn`:
-// https://github.com/sindresorhus/eslint-plugin-unicorn
+// @ts-expect-error https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2324
+import ESLintPluginUnicorn from "eslint-plugin-unicorn";
+import tseslint from "typescript-eslint";
 
-// Rules are separated into categories:
-// 1) Normal rules
-// 2) Deprecated rules
-
+/** @type {Record<string, import("@typescript-eslint/utils").TSESLint.SharedConfig.RuleEntry>} */
 const NORMAL_RULES = {
   "unicorn/better-regex": "error",
   "unicorn/catch-error-name": "error",
@@ -159,6 +157,7 @@ const NORMAL_RULES = {
   "unicorn/throw-new-error": "error",
 };
 
+/** @type {Record<string, import("@typescript-eslint/utils").TSESLint.SharedConfig.RuleEntry>} */
 const DEPRECATED_RULES = {
   /** Disabled because this rule is deprecated. */
   "unicorn/import-index": "off",
@@ -212,21 +211,31 @@ const DEPRECATED_RULES = {
   "unicorn/regex-shorthand": "off",
 };
 
-export default {
-  plugins: ["unicorn"],
+/**
+ * This ESLint config only contains rules from `eslint-plugin-unicorn`:
+ * https://github.com/sindresorhus/eslint-plugin-unicorn
+ *
+ * Rules are separated into categories:
+ * 1) Normal rules
+ * 2) Deprecated rules
+ */
+export const baseUnicorn = tseslint.config(
+  {
+    plugins: {
+      unicorn: ESLintPluginUnicorn,
+    },
 
-  rules: {
-    ...NORMAL_RULES,
-    ...DEPRECATED_RULES,
+    rules: {
+      ...NORMAL_RULES,
+      ...DEPRECATED_RULES,
+    },
   },
 
-  overrides: [
-    // Disable some TypeScript-specific rules in JavaScript files.
-    {
-      files: ["*.js", "*.cjs", "*.mjs", "*.jsx"],
-      rules: {
-        "unicorn/prefer-module": "off",
-      },
+  // Disable some TypeScript-specific rules in JavaScript files.
+  {
+    files: ["*.js", "*.cjs", "*.mjs", "*.jsx"],
+    rules: {
+      "unicorn/prefer-module": "off",
     },
-  ],
-};
+  },
+);
