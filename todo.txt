@@ -6,10 +6,10 @@
 
 - waiting on ESLint 9 support:
   - RuleTester
-  - eslint-plugin-deprecation
   - eslint-plugin-no-autofix
   - eslint-plugin-eslint-comments
   - eslint-plugin-import
+  - eslint-plugin-deprecation
 
 - lint projects:
   - fix returning `Promise<string[]>`
