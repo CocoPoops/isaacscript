@@ -55,14 +55,12 @@ const STYLISTIC_ISSUES = {
  * @see https://github.com/eslint-community/eslint-plugin-eslint-comments/issues/215
  */
 export const baseESLintComments = tseslint.config({
-  /*
   plugins: {
-    "eslint-comments": ESLintPluginESLintComments,
+    // "eslint-comments": ESLintPluginESLintComments,
   },
 
   rules: {
-    ...BEST_PRACTICES,
-    ...STYLISTIC_ISSUES,
+    // ...BEST_PRACTICES,
+    // ...STYLISTIC_ISSUES,
   },
-  */
 });

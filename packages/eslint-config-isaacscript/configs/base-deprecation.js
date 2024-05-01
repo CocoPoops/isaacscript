@@ -11,7 +11,7 @@ import tseslint from "typescript-eslint";
 export const baseDeprecation = tseslint.config({
   /*
   plugins: {
-    deprecation,
+    deprecation: ESLintPluginDeprecation,
   },
 
   rules: {
