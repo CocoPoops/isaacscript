@@ -4798,6 +4798,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint__eslintrc@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@types/eslint__eslintrc@npm:2.1.1"
+  dependencies:
+    "@types/eslint": "npm:*"
+  checksum: 10c0/1887208bdd0bf3bce4e2055b2b69178c38b9b29a44aceecffa4942d4ebd7b7fec33cb4a99d8dfc1f1f202208debd308e7b7afc128cfb33ae665d2cc09a6fa378
+  languageName: node
+  linkType: hard
+
 "@types/eslint__js@npm:^8.42.3":
   version: 8.42.3
   resolution: "@types/eslint__js@npm:8.42.3"
@@ -11639,6 +11648,7 @@ __metadata:
     "@types/confusing-browser-globals": "npm:^1.0.3"
     "@types/diff": "npm:^5.2.0"
     "@types/eslint-config-prettier": "npm:^6.11.3"
+    "@types/eslint__eslintrc": "npm:^2.1.1"
     "@types/eslint__js": "npm:^8.42.3"
     "@types/figlet": "npm:^1.5.8"
     "@types/glob": "npm:^8.1.0"

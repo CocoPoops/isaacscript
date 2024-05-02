@@ -1,3 +1,6 @@
+- things to consider before merging flat config branch:
+  - vscode extension no longer in alpha/beta: https://github.com/microsoft/vscode-eslint/releases
+
 - test eslint-plugin-import
 
 - try removing ESLint parserOptions, since they might not be needed with flat config
@@ -11,7 +14,8 @@
   - eslint-plugin-import
   - eslint-plugin-deprecation
 
-- re-enable knip
+- re-enable knip in lint.ts
+- re-enable check-ts in lint.ts
 - see top comment of "update.ts" (and uncomment "no-useless-assignment")
 
 - lint projects:

@@ -1,6 +1,4 @@
-/**
- * This config is meant to be used as a base for IsaacScript mods (or TypeScriptToLua projects).
- */
+/** This config is meant to be used as a base for IsaacScript mods (or TypeScriptToLua projects). */
 export default {
   extends: [
     /**
