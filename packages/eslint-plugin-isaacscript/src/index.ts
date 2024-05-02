@@ -23,9 +23,6 @@ export default plugin;
  * We parse the package JSON manually since importing JSON files directly in Node is experimental.
  */
 function getPackageJSON(): Record<string, unknown> {
-  if (import.meta.dirname === undefined) {
-    throw new Error(`LOL: ${process.versions.node}`);
-  }
   const packageJSONPath = path.join(import.meta.dirname, "..", "package.json");
   try {
     const packageJSONString = fs.readFileSync(packageJSONPath, "utf8");
