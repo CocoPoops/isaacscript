@@ -1,5 +1,5 @@
 import type { CallbackPriority } from "isaac-typescript-definitions";
-import type { AllButFirst } from "isaacscript-common";
+import type { AllButFirst, ModFeature } from "isaacscript-common";
 import type { ModCallbackRepentogon } from "../../enums/ModCallbackRepentogon";
 
 declare module "isaacscript-common" {
